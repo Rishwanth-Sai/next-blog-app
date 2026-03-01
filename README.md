@@ -1,36 +1,139 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Full-Stack Blog Platform
 
-## Getting Started
+A cloud-deployed full-stack blog platform built using **Next.js 16, React, MongoDB, and NextAuth**, featuring role-based authentication, blog management, voting system, and persistent reading mode.
 
-First, run the development server:
+**Live Demo:**  
+https://next-blog-518312514898.asia-south1.run.app
 
+---
+
+## Features
+
+### Authentication & Authorization
+- Secure login & signup using **NextAuth (JWT strategy)**
+- Role-based access control (**Admin / User**)
+- Protected API routes
+- Session persistence
+
+### Blog Management
+- Create, edit, delete blogs
+- Admin can manage all blogs
+- Users manage their own blogs
+- Blog rating system (upvote/downvote with user state tracking)
+
+### Profile Management
+- Update username and email
+- Secure password change with current password verification
+- Persistent reading mode preference (stored per user)
+
+### UI Features
+- Light / Reading Mode (user preference stored in database)
+- Responsive design using TailwindCSS
+- Real-time UI updates
+- Profile dropdown with dynamic navigation
+
+### Deployment & DevOps
+- Dockerized application
+- Deployed to **Google Cloud Run**
+- MongoDB Atlas production database
+- Environment-based configuration
+- Production-ready build using Next.js standalone output
+
+---
+
+## Tech Stack
+
+### Frontend
+- Next.js 16 (App Router)
+- React
+- TailwindCSS
+- Axios
+
+### Backend
+- Next.js API Routes
+- MongoDB (Mongoose)
+- NextAuth (JWT Authentication)
+
+### Cloud & DevOps
+- Docker
+- Google Cloud Run
+- MongoDB Atlas
+
+---
+
+## Project Structure
+app/
+├── admin/
+├── dashboard/
+├── blogs/
+├── login/
+├── signup/
+├── profile/
+api/
+lib/
+components/
+
+
+---
+
+## Local Setup
+
+### Clone the repository
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+```
+### Install dependencies
+```bash
+npm install
+```
+### Create .env.local
+```bash
+MONGODB_URI=your_mongodb_connection_string
+NEXTAUTH_SECRET=your_secret
+NEXTAUTH_URL=http://localhost:3000
+```
+### Run development server
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Docker build
+```bash
+docker build -t next-blog .
+docker run -p 3000:3000 next-blog
+```
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Architecture Highlights
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### JWT-based authentication with session callbacks
 
-## Learn More
+### Role-based middleware for admin protection
 
-To learn more about Next.js, take a look at the following resources:
+### RESTful API structure with proper HTTP status handling
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Suspense handling for client-side hooks in App Router
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Stateful vote system preventing duplicate votes
 
-## Deploy on Vercel
+### Secure password hashing using bcrypt
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Future Improvements
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Cloud image storage (GCS / S3)
+
+### Blog search & filtering
+
+### Pagination optimization
+
+### Comment system
+
+### Caching layer (Redis)
+
+## Author
+
+Rishwanth Sai Guntuku
+IIT Indore – Computer Science
+GitHub: https://github.com/Rishwanth-Sai
+
+LinkedIn: https://linkedin.com/in/rishwanth-sai
