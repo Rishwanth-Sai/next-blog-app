@@ -105,35 +105,23 @@ docker run -p 3000:3000 next-blog
 ```
 
 ## Architecture Highlights
-
-### JWT-based authentication with session callbacks
-
-### Role-based middleware for admin protection
-
-### RESTful API structure with proper HTTP status handling
-
-### Suspense handling for client-side hooks in App Router
-
-### Stateful vote system preventing duplicate votes
-
-### Secure password hashing using bcrypt
+- JWT-based authentication with session callbacks
+- Role-based middleware for admin protection
+- RESTful API structure with proper HTTP status handling
+- Suspense handling for client-side hooks in App Router
+- Stateful vote system preventing duplicate votes
+- Secure password hashing using bcrypt
 
 ## Future Improvements
-
-### Cloud image storage (GCS / S3)
-
-### Blog search & filtering
-
-### Pagination optimization
-
-### Comment system
-
-### Caching layer (Redis)
+- Cloud image storage (GCS / S3)
+- Blog search & filtering
+- Pagination optimization
+- Comment system
+- Caching layer (Redis)
 
 ## Author
 
-Rishwanth Sai Guntuku
-IIT Indore – Computer Science
-GitHub: https://github.com/Rishwanth-Sai
-
-LinkedIn: https://linkedin.com/in/rishwanth-sai
+### Rishwanth Sai Guntuku
+- IIT Indore – Computer Science
+- GitHub: https://github.com/Rishwanth-Sai
+- LinkedIn: https://linkedin.com/in/rishwanth-sai
