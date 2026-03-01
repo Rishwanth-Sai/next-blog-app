@@ -61,7 +61,9 @@ https://next-blog-518312514898.asia-south1.run.app
 
 ---
 
-## Project Structure
+## 📂 Project Structure
+
+```
 app/
 ├── admin/
 ├── dashboard/
@@ -72,7 +74,7 @@ app/
 api/
 lib/
 components/
-
+```
 
 ---
 
